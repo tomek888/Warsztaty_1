@@ -14,8 +14,10 @@ public class Lotto {
 		int count=0;
 		Scanner scan = new Scanner(System.in);
 		for(int i=0;i<6;i++) {
-
 			n[i]=getInt("Podaj "+(i+1) +" liczbę z zakresu 1-49");
+			while(true) {
+
+			
 			while(n[i]<1) {
 				System.out.println("Liczba jest za mała");
 				n[i]=getInt("Podaj "+(i+1) +" liczbę z zakresu 1-49");
@@ -31,6 +33,10 @@ public class Lotto {
 
 				}
 			}
+			if((n[i]>1)&&(n[i]<50)) {
+			break;
+			}
+		}
 		}
 		Arrays.sort(n);
 		for(int k=0;k<6;k++) {
